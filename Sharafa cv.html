@@ -1,0 +1,501 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CV</title>
+            <style>
+                * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      font-family: "cambria", sans-serif;
+    }
+    
+    body {
+      background:#888d9b;
+      font-size: 16px;
+      line-height: 22px;
+      color:rgb(5, 5, 5);
+    }
+    
+    .bold {
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .name {
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #05146e;
+    }
+    .semi-bold {
+      font-weight: 500;
+      font-size: 18px;
+    }
+    
+    .resume {
+      width: 800px;
+      height: auto;
+      display: flex;
+      margin: 50px auto;
+    }
+    .resume .resume_left {
+      width: 320px;
+      background: linear-gradient(to right, #4b5bb1, black);
+    };
+    
+    
+    .resume .resume_left .resume_profile {
+      width: 280px;
+      height: 280px;
+      margin-right:20px;
+     
+    }
+    
+    .resume .resume_left .resume_content {
+      padding: 0 18px;
+    }
+    
+    .resume .title {
+      margin-bottom: 20px;
+    }
+    
+    .resume .resume_left .bold {
+      color: #fff;
+    }
+    
+    .resume .resume_left .regular {
+      color: #f7fafc;
+    }
+    
+    .resume .resume_item {
+      padding: 25px 0;
+      border-bottom: 3px solid #eaf0f3;
+    }
+    
+    .resume .resume_left .resume_item:last-child,
+    .resume .resume_right .resume_item:last-child {
+      border-bottom: 0px;
+    }
+    
+    .resume .resume_left ul li {
+      display: flex;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+    
+    .resume .resume_left ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    .resume .resume_right .resume_hobby ul li i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .resume .resume_left ul li .data {
+      color: #ffffff;
+    }
+    
+    .resume .resume_left .resume_skills ul li {
+      display: flex;
+      margin-bottom: 10px;
+      color: #fcfdfd;
+      justify-content: space-between;
+      align-items:flex-start;
+    }
+    
+    .resume .resume_left .resume_skills ul li .skill_name {
+      width: 40%;
+    }
+    
+    .resume .resume_left .resume_skills ul li .skill_progress {
+      width: 60%;
+      margin: 0 5px;
+      height: 5px;
+      background: #009fd9;
+      position: relative;
+    }
+    
+    .resume .resume_left .resume_skills ul li .skill_per {
+      width: 15%;
+    }
+    
+    .resume .resume_left .resume_skills ul li .skill_progress span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: #fff;
+    }
+    
+    .resume .resume_left .resume_social .semi-bold {
+      color: #fff;
+      margin-bottom: 3px;
+    }
+    
+    .resume .resume_right {
+      width: 520px;
+      background:rgb(219, 230, 220);
+      padding: 25px;
+    }
+    
+    .resume .resume_right .bold {
+      color: darkblue;
+    }
+    
+    .resume .resume_right .resume_work ul,
+    .resume .resume_right .resume_education ul {
+      padding-left: 40px;
+      overflow: hidden;
+    }
+    
+    .resume .resume_right ul li {
+      position: relative;
+    }
+    
+    .resume .resume_right ul li .date {
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    
+    .resume .resume_right ul li .info {
+      margin-bottom: 20px;
+    }
+    
+    .resume .resume_right ul li:last-child .info {
+      margin-bottom: 0;
+    }
+    
+    .resume .resume_right .resume_work ul li:before,
+    .resume .resume_right .resume_education ul li:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -25px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+    
+    .resume .resume_right .resume_work ul li:after,
+    .resume .resume_right .resume_education ul li:after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: -21px;
+      width: 2px;
+      height: 115px;
+      background:rgb(57, 88, 3);
+    }
+    
+    .resume .resume_right .resume_hobby ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .resume .resume_right .resume_hobby ul li {
+      width: 100px;
+      height: 100px;
+      border: 3px solid rgb(162, 162, 177);
+      border-radius: 50%;
+      position: relative;
+      color: rgb(22, 175, 30);
+    }
+    
+    .resume .resume_right .resume_hobby ul li i {
+      font-size: 20px;
+    }
+    
+    .resume .resume_right .resume_hobby ul li:before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      right: -70px;
+      width: 70px;
+      height: 3px;
+      background: #010507;
+    }
+    
+    .resume .resume_right .resume_hobby ul li:last-child:before {
+      display: none;
+    }
+            </style>
+            	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        </head>
+        <body>
+            <div class="resume">
+                <div class="resume_left">
+                  <div class="resume_content">
+                    <div class="resume_item resume_info">
+                      <div class="title">
+                      <p class="bold">CONTACT DETAILS</p>
+                    </div>
+                      <ul>
+                        <li>
+                          <div class="data">
+                           <b> Address: </b> No, 61/1, 1 st cross street, Nintavur 18 ,Ampara , Srilanka
+                          </div>
+                        </li>
+                        <li>
+                          <div class="data">
+                            <b> Mobile : </b> 0767801636
+                          </div>
+                        </li>
+                        <li>
+                          <div class="data">
+                            <b> Email: </b> srf.raheem@gmail.com</a>
+                          </div>
+                        </li>
+                        <li>
+                            <div class="data">
+                              <b> Github </b> <a href="https://github.com/S92066671" style="color:#ffffff;" target="_blank"> https://github.com/S92066671</a>
+                            </div>
+                          </li>
+                      </ul>
+                    </div>
+                    <div class="resume_item resume_skills">
+                      <div class="title">
+                        <p class="bold">Technical skills</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="skill_name">
+                            HTML
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            CSS
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 85%;"></span>
+                          </div>
+                          <div class="skill_per">85%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                           Java
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 75%;"></span>
+                          </div>
+                          <div class="skill_per">75%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            C language
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 88%;"></span>
+                          </div>
+                          <div class="skill_per">88%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                           Python
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 75%;"></span>
+                          </div>
+                          <div class="skill_per">75%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                           reactnative
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 75%;"></span>
+                          </div>
+                          <div class="skill_per">75%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            MS Office
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="resume_item resume_skills">
+                     <div class="title">
+                       <p class="bold">soft skills</p>
+                     </div>
+                     <ul>
+                       <li>
+                         <div class="skill_name">
+                          Self-learning
+                         </div>
+                       </li>
+                       <li>
+                         <div class="skill_name">
+                          Teamwork
+                         </div>
+                       </li>
+                       <li>
+                         <div class="skill_name">
+                           Well communication
+                         </div>
+                       </li>
+                       <li>
+                        <div class="skill_name">
+                          Problem Solving
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skill_name">
+                          personal responsibilities
+                        </div>
+                      </li>
+                       
+                     </ul>
+                   </div>
+                    <div class="resume_item resume_social">
+                      <div class="title">
+                        <p class="bold">Social</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="icon">
+                            <a class="semi-bold" href="https://www.facebook.com/raheem.raheem.524381" target="_blank" ><i class="fab fa-facebook-square"></i></a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="icon">
+                            <a class="semi-bold" href="https://twitter.com/ARaheem69" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="icon">
+                            <a class="semi-bold" href="https://www.instagram.com/invites/contact/?i=kc687qye82gn&utm_content=lyvhoyu" target="blank"> <i class="fab fa-instagram"></i>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="icon">
+                            <a class="semi-bold" href="www.linkedin.com/in/fathima-sharafa-" target="blank"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+               </div>
+             
+               <div class="resume_right">
+                 <div class="">
+                  <div class="title">
+                    <p class="name">Fathima Sharafa Hachchi Mohamed </p>
+                    <p>Undergraduate in OUSL </p>
+                  </div>
+
+                     <div class="title">
+                        <p class="bold">Career Objective</p>
+                      </div>
+                     <p style="text-align: justify">An independent & fast learner, excellent team player and Self-motivated with in-depth knowledge person seeking a position to use my skills to the advantage of the company while having the scope to develop my own skills. Looking forward to working in IT industry.
+                    </p>
+                 </div>
+                 <div class="resume_item resume_work">
+                     <div class="title">
+                        <p class="bold">EDUCATION</p>
+                      </div>
+                     <ul>
+                         <li>
+                             <div class="date">2021/2022</div> 
+                             <div class="info">
+                                  <p style="text-align: justify" >•&nbsp;<b>Bachelor of Software Engineering (Reading)</b></p> 
+                               
+                             </div>
+                         </li>
+                         <li>
+                           <div class="date">2019</div>
+                           <div class="info">
+                                  <p style="text-align: justify">•&nbsp;<b>GCE A/L Biological Science (2C’s 1S)</b></p> 
+                                  &nbsp; KM/KM/Al- Ashraq national school, Nintavur
+                              
+                             </div>
+                         </li>
+                         <li>
+                            <div class="date">2015</div>
+                            <div class="info">
+                                   <p style="text-align: justify">•&nbsp;<b>GCE O/L (6A’s 3B’s)</b></p> 
+                                   &nbsp;KM/KM/Al- Ashraq national school, Nintavur
+                               
+                              </div>
+                          </li>
+                        
+                     </ul>
+                 </div>
+                 <div class="resume_item resume_education">
+                   <div class="title">
+                        <p class="bold">Job Preference </p>
+                      </div>
+                             <div class="info">Software Engineering
+                                  <br>Software Quality Assurance
+                                  <br>Database Development & Administration
+                                  <br>DevOps
+                                  <br> Cyber security                                 
+                             </div>
+                 </div>
+                 <div class="resume_item resume_education">
+                   <div class="title">
+                        <p class="bold"> Achievements & Awards</p>
+                      </div>
+                             <div class="date"><b>School...</b></div> 
+                             <div class="info">
+                                    •  Environment pioneer president medal award - 2015
+                                   <br> • Division level English day competition – 2017
+                                   <br> • Division level Tamil Day competition – 2015
+                                    <br> • Participant in Olympiad and other math competition
+                                    Technical
+                             </div>
+                            <div class="date"><b>Technical...</b></div> 
+                            <div class="info">
+                                   • Nenasala- Certificate level course in Web Designing 2014
+                                  <br> • Nenasala- Certificate level course in Office Automation with Internet Technology- 2015
+                                  <br> • Sololearn online free courses:<a href="https://www.sololearn.com/certificates/course/en/24238111/1068/landscape/png" target="_blank" >java</a>   , 
+                                  <a href="https://www.sololearn.com/certificates/course/en/24238111/1172/landscape/png" target="_blank">python for beginners</a>,
+                                  <a href="https://www.sololearn.com/certificates/course/en/24238111/1159/landscape/png" target="_blank">python data structures</a>,
+                                  <a href="https://www.sololearn.com/certificates/course/en/24238111/1060/landscape/png" target="_blank">SQL </a>
+                                   <br> • FreeCodeCamp- <a href="https://www.freecodecamp.org/certification/Fathima_Sharafa/responsive-web-design" target="_blank">Responsive web Designing </a>
+                                </div>
+                 </div>
+                 <div class="resume_item resume_education">
+                   <div class="title">
+                        <p class="bold"> ACTIVITIES </p>
+                      </div>
+                             <div class="info">
+                                  <p style="text-align: justify">	• monitor of the class (2014-2015)- coordinate my classmates and help them in their studies & Manage class documents.
+                                    <br>• Senior prefect(2017-2018)- organizing and hosting events, discipline checking etc.
+                                   </br>• Environmental brigades program pioneer:- participate national camps. organizing tree planting, Shramadana campaign awareness program about the environmental problems and brigades’ program. Do projects.
+                                   </br> • Vice president of first aid group.
+                                  </br> • Participate in inter house sports festival– Girls Captain of my house(2017).
+                                </br> • Participate in “Mother Sri Lanka” cultural program.
+                                   </p> 
+                                
+                                  </div>
+                 </div>
+                 <div class="resume_item resume_hobby">
+                   <div class="title">
+                        <p class="bold">Hobbies & interests</p>
+                      </div>
+                    <ul>
+                      Browsing internet, social media, learning new languages & things, photography, travelling
+                 </div>
+               </div>
+             </div>
+            
+        </body>
+        </html>
